@@ -148,7 +148,7 @@ quitting.
 Forces the current test to fail. Mainly used by assert functions, but can be
 called directly if need be.
 
-#### test_suite_pass();
+#### test_suite_pass()
 
 Passes the current test suite, to be called on the final user defined event on 
 the test object. If there is a room after the current one, it will move on to
