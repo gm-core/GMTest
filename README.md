@@ -127,54 +127,54 @@ tree.
 
 ## API
 
-## Test Management
+### Test Management
 
-### test_init(name)
+#### test_init(name)
 
 Initializes a test suite with the given name.
 
-### describe(title, description)
+#### describe(title, description)
 
 Defines an individual test named `title`, expecting the behavior defined in
 `description`.
 
-### test_end()
+#### test_end()
 
 Ends the current individual test, passing on to the next test or failing and
 quitting.
 
-### test_fail()
+#### test_fail()
 
 Forces the current test to fail. Mainly used by assert functions, but can be
 called directly if need be.
 
-### test_suite_pass();
+#### test_suite_pass();
 
 Passes the current test suite, to be called on the final user defined event on 
 the test object. If there is a room after the current one, it will move on to
 that room, otherwise, quits the game with an information dump in the console.
 
-## Assert Types
+### Assert Types
 
-### assert(value, expectedValue)
+#### assert(value, expectedValue)
 
 Ensures that the given `value` is equal to `expectedValue`.
 
-### assert_not(value, unexpectedValue)
+#### assert_not(value, unexpectedValue)
 
 Ensures that the given `value` is NOT equal to `unexpectedValue`.
 
-### assert_exists(object)
+#### assert_exists(object)
 
 Ensures that an instance of `object` exists in the room.
 
-### assert_does_not_exist(object)
+#### assert_does_not_exist(object)
 
 Ensures that an instance of `object` does not exist in the room.
 
-## Utility
+### Utility
 
-### info(string1[, string2, string3, ... string16])
+#### info(string1[, string2, string3, ... string16])
 
 Combines all of the given strings and prints them all to the console. Only the
 first string is mandatory. If you are using a version of GameMaker that does not
