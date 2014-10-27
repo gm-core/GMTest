@@ -73,7 +73,7 @@ var oldHP = obj_player.hp;
 var damageAmount = 10;
 hurt_player(damageAmount); // A script to cause damage to the player.
 
-assert(player.hp, oldHP - damageAmount);
+assert(obj_player.hp, oldHP - damageAmount);
 
 test_end();
 ```
