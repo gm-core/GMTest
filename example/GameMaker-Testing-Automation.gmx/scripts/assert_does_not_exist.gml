@@ -8,6 +8,11 @@
  */
 global.testAssertNumber++;
 if (instance_exists(argument0)) {
-    var msg = create_assert_error(string(argument0) + " should not exist");
+
+    if (argument_count > 1) {
+        msg = argument[1];
+    } else {
+        msg = create_assert_error(string(argument[0]) + " should not exist");
+    }
     test_fail(msg);
 }

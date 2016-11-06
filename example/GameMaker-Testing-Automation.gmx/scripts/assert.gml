@@ -9,7 +9,13 @@
  * assert(player.health, 90);
  */
 global.testAssertNumber++;
-if (argument0 != argument1) {
-    var msg = create_assert_error(string(argument0) + " is not " + string(argument1));
+if (argument[0] != argument[1]) {
+
+    var msg;
+    if (argument_count > 2) {
+        msg = argument[2];
+    } else {
+        msg = create_assert_error(string(argument[0]) + " is not " + string(argument[1]));
+    }
     test_fail(msg);
 }
