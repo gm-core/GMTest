@@ -113,19 +113,21 @@ that room, otherwise, quits the game with an information dump in the console.
 
 ### Assert Types
 
-#### `assert(value, expectedValue)`
+All assertions can optionally take a custom error message as a third argument.
+
+#### `assert(value, expectedValue [, customMessage])`
 
 Ensures that the given `value` is equal to `expectedValue`.
 
-#### `assert_not(value, unexpectedValue)`
+#### `assert_not(value, unexpectedValue [, customMessage])`
 
 Ensures that the given `value` is NOT equal to `unexpectedValue`.
 
-#### `assert_exists(object)`
+#### `assert_exists(object [, customMessage])`
 
 Ensures that an instance of `object` exists in the room.
 
-#### `assert_does_not_exist(object)`
+#### `assert_does_not_exist(object [, customMessage])`
 
 Ensures that an instance of `object` does not exist in the room.
 
