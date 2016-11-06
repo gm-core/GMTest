@@ -1,7 +1,7 @@
-GaMaTas
+GaMaTas - Testing automation for GameMaker: Studio
 =======
 
-Testing automation for GameMaker
+Version 1.0.0
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -15,6 +15,11 @@ Testing automation for GameMaker
 
 Gamatas is a collection of GML scripts to add automated testing to GameMaker.
 Just import the scripts into your project, and you're ready to start writing some tests!
+
+## Installation
+
+Download the latest [gamatas.gml from releases](/releases) and import the scripts
+into your project.
 
 ## Example
 
@@ -76,17 +81,6 @@ a status report of all your tests.
 > **Note:** All tests should have their own rooms. Make a room with nothing but the
 > test running object and any objects you need to run the tests. All test rooms
 > should be back-to-back, so Gamatas can run through all of them.
-
-## How To Use Gamatas
-
-**To use Gamatas in your game, download the 'gamatas.zip' file from the
-[releases](https://github.com/twisterghost/gamatas/releases) page**, and unzip 
-the files somewhere on your computer. You can then import the script files to 
-your game, and you're ready to go!
-
-
-It may help to put them in a folder of their own within your game's resource
-tree.
 
 ## API
 
