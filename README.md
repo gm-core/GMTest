@@ -18,7 +18,7 @@ Just import the scripts into your project, and you're ready to start writing som
 
 ## Installation
 
-Download the latest [gamatas.gml from releases](/releases) and import the scripts
+Download the latest [gamatas.gml from releases](https://github.com/twisterghost/gamatas/releases) and import the scripts
 into your project.
 
 ## Example
