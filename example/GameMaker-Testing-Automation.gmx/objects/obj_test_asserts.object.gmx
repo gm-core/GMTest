@@ -53,7 +53,8 @@ test_init("Assertion Tests");
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>test_suite_pass();
+            <string>/// Pass test suite
+test_suite_pass();
 </string>
           </argument>
         </arguments>
@@ -76,7 +77,8 @@ test_init("Assertion Tests");
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>describe("Assert Does Not Exist", "Should know if an object doesn't exist");
+            <string>/// assert_does_not_exist()
+describe("Assert Does Not Exist", "Should know if an object doesn't exist");
 
 with (obj_another_object) {
     instance_destroy();
@@ -107,7 +109,8 @@ test_end();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>describe("Assert Exists", "Should know if an object exists");
+            <string>/// assert_exists()
+describe("Assert Exists", "Should know if an object exists");
 
 instance_create(0, 0, obj_another_object);
 assert_exists(obj_test_asserts);
@@ -135,7 +138,8 @@ test_end();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>describe("Assert Not", "Should know right from right");
+            <string>/// assert_not()
+describe("Assert Not", "Should know right from right");
 
 assert_not("hello", "world");
 assert_not(true, false);
@@ -166,7 +170,8 @@ test_end();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>describe("Assert", "Should know right from wrong.");
+            <string>/// assert()
+describe("Assert", "Should know right from wrong.");
 
 assert(true, true);
 assert(false, false);

@@ -11,19 +11,27 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\assert.gml</script>
-    <script>scripts\assert_does_not_exist.gml</script>
-    <script>scripts\assert_exists.gml</script>
-    <script>scripts\assert_not.gml</script>
-    <script>scripts\create_assert_error.gml</script>
-    <script>scripts\describe.gml</script>
-    <script>scripts\info.gml</script>
-    <script>scripts\int_to_event.gml</script>
-    <script>scripts\test_end.gml</script>
-    <script>scripts\test_fail.gml</script>
-    <script>scripts\test_init.gml</script>
-    <script>scripts\test_next.gml</script>
-    <script>scripts\test_suite_pass.gml</script>
+    <scripts name="gamatas">
+      <scripts name="assertions">
+        <script>scripts\assert.gml</script>
+        <script>scripts\assert_exists.gml</script>
+        <script>scripts\assert_not.gml</script>
+        <script>scripts\assert_does_not_exist.gml</script>
+      </scripts>
+      <scripts name="test management">
+        <script>scripts\describe.gml</script>
+        <script>scripts\test_init.gml</script>
+        <script>scripts\test_next.gml</script>
+        <script>scripts\test_fail.gml</script>
+        <script>scripts\test_end.gml</script>
+        <script>scripts\test_suite_pass.gml</script>
+      </scripts>
+      <scripts name="util">
+        <script>scripts\int_to_event.gml</script>
+        <script>scripts\create_assert_error.gml</script>
+        <script>scripts\gamatas_info.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_test_asserts</object>

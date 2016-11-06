@@ -4,10 +4,10 @@
  * to the next test, otherwise, fails the test and exits.
  */
 if (global.testPassed) {
-    info("TEST PASSED: " + global.testName);
+    gamatas_info("TEST PASSED: " + global.testName);
     test_next();
 } else {
-    info("TEST FAILED: " + global.testName);
-    info("TEST SUITE FAILED: " + global.testSuiteName);
+    gamatas_info("TEST FAILED: " + global.testName);
+    gamatas_info("TEST SUITE FAILED: " + global.testSuiteName);
     game_end();
 }

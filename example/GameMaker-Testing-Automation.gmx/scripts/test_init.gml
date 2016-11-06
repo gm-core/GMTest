@@ -6,5 +6,5 @@ global.testCount = 0;
 global.testSuiteName = argument0;
 global.testNumber = 0;
 global.testAssertNumber = 0;
-info("TESTING SUITE: " + argument0);
+gamatas_info("TESTING SUITE: " + argument0);
 test_next();

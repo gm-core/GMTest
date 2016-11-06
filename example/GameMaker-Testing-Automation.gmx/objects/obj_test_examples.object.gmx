@@ -85,7 +85,8 @@ test_end();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>test_suite_pass();
+            <string>/// Pass tests
+test_suite_pass();
 </string>
           </argument>
         </arguments>
@@ -108,7 +109,8 @@ test_end();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>describe("Event Simulation", "Should allow for UI testing");
+            <string>/// Event simulation example
+describe("Event Simulation", "Should allow for UI testing");
 
 // Create our button and ensure it is in a normal state.
 var button = instance_create(50, 50, obj_clickme);
@@ -146,7 +148,8 @@ test_end();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>describe("Object definitions", "Should allow for complex variable definitions to be verified");
+            <string>/// Object definitions example
+describe("Object definitions", "Should allow for complex variable definitions to be verified");
 
 // Define a dummy object and populate it with some data.
 var props = instance_create(0, 0, obj_blank);
@@ -191,7 +194,8 @@ test_end();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>describe("Async Tests", "Allows an object some time to perform an action and " + 
+            <string>/// Async test example
+describe("Async Tests", "Allows an object some time to perform an action and " + 
          "tests the end result");
 
 // Instantiate our counting object (counts 1 per step).
@@ -227,7 +231,8 @@ alarm[0] = 10;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>describe("Object Relationships", "The parent should remove the child if it is destroyed");
+            <string>/// Object relationship example
+describe("Object Relationships", "The parent should remove the child if it is destroyed");
 
 // Just to be sure there isn't anything mucking up the test room.
 assert_does_not_exist(obj_parent_object);

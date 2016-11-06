@@ -79,10 +79,6 @@ a status report of all your tests.
 
 ## How To Use Gamatas
 
-Gamatas comes in the form of pure GML scripts. It did not seem appropriate to 
-turn them into a GameMaker Extension, as the argument typing system for
-extensions limits the assert functionality.
-
 **To use Gamatas in your game, download the 'gamatas.zip' file from the
 [releases](https://github.com/twisterghost/gamatas/releases) page**, and unzip 
 the files somewhere on your computer. You can then import the script files to 

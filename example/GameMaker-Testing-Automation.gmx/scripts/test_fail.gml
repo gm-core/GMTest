@@ -4,7 +4,7 @@
  * tests if need be.
  */
  var msg = argument0; 
-info(msg);
-info("In suite " + global.testSuiteName);
-info("In test " + global.testName + ": " + global.testDescription);
+gamatas_info(msg);
+gamatas_info("In suite " + global.testSuiteName);
+gamatas_info("In test " + global.testName + ": " + global.testDescription);
 global.testPassed = false;
