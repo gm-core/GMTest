@@ -1,3 +1,4 @@
+/// @param TestSuiteName
 /*
  * Initializes a test in an empty room
  */

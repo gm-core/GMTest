@@ -1,3 +1,4 @@
+/// @param Message
 /*
  * Fails a test, printing the message and test info. This is used
  * internally by asserts, but can also be used to manually fail

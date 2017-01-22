@@ -1,3 +1,5 @@
+/// @param Name
+/// @param Description
 /*
  * Sets the description of the currently running test or exits
  * if the previous test fails. Use this to define specific tests

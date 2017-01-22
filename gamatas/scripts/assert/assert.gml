@@ -1,3 +1,5 @@
+/// @param TestValue
+/// @param ExpectedValue
 /*
  * Ensures the passed in argument0 evalutates to argument1.
  * If it fails, it will log an error and fail the test.

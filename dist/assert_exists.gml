@@ -1,3 +1,4 @@
+/// @param Object
 /*
  * Ensures that an instance of the given object exists.
  * If it fails, it will log an error and fail the test.
