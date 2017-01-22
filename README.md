@@ -1,7 +1,7 @@
 GaMaTas - Testing automation for GameMaker: Studio
 =======
 
-Version 1.0.0
+Version 2.0.0
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -14,18 +14,16 @@ Version 1.0.0
 ## Introduction
 
 Gamatas is a collection of GML scripts to add automated testing to GameMaker.
-Just import the scripts into your project, and you're ready to start writing some tests!
 
 ## Installation
 
-Download the latest [gamatas.gml from releases](https://github.com/twisterghost/gamatas/releases) and import the scripts
+Download the latest [gamatas.zip from releases](https://github.com/twisterghost/gamatas/releases) and import the scripts
 into your project.
 
-## Example
+## Usage
 
-There is an example .gmx file in the top level `example` directory.
 
-### Step 1 - Define the test suite
+### 1. Define the test suite
 
 Create an object to house the tests for a suite. You can have as many test
 suites as you want. Each suite is represented by an object.
@@ -37,7 +35,7 @@ your test:
 test_init("Player Health and Death Tests");
 ```
 
-### Step 2 - Write some tests
+### 2. Write some tests
 
 Gamatas will run through tests in order based on your User Defined events. On
 your test object, add a `User Defined 0` event. This is the first user defined
@@ -48,9 +46,9 @@ Now, define a specific test with `describe()`:
 ```GML
 describe("Player Takes Damage", "Should cause the health variable to be lower")
 ```
-Next, its time to write the actual test code. Write some code to ensure that
+Next, write the actual test code. Write some code to ensure that
 there is a player object in the game, then hurt it, then check that it has
-lower health than before.
+lower health than before with an assertion:
 
 ```GML
 instance_create(100, 100, obj_player);
@@ -78,9 +76,8 @@ This will alert Gamatas that the entire test suite for that test object has
 passed, and to either continue on to the next test suite, or end the game with
 a status report of all your tests.
 
-> **Note:** All tests should have their own rooms. Make a room with nothing but the
-> test running object and any objects you need to run the tests. All test rooms
-> should be back-to-back, so Gamatas can run through all of them.
+> **Note:** When a test suite passes, Gamatas moves to the next room to begin the next test.
+> make a room for each test suite that you need, containing the test runner object for that suite.
 
 ## API
 
@@ -130,15 +127,6 @@ Ensures that an instance of `object` exists in the room.
 #### `assert_does_not_exist(object [, customMessage])`
 
 Ensures that an instance of `object` does not exist in the room.
-
-### Utility
-
-#### `info(string1[, string2, string3, ... string16])`
-
-Combines all of the given strings and prints them all to the console. Only the
-first string is mandatory. If you are using a version of GameMaker that does not
-support the console output, you may want to change this function to output to a
-medium of your liking. Alternates of this file are on the way.
 
 ## Developer Information
 
