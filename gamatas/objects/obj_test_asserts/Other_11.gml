@@ -1,5 +1,5 @@
 /// assert_not()
-describe("Assert Not", "Should know right from right");
+test_start("Assert Not", "Should know right from right");
 
 assert_not("hello", "world");
 assert_not(true, false);

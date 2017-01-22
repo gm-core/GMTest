@@ -1,8 +1,8 @@
 /// Event simulation example
-describe("Event Simulation", "Should allow for UI testing");
+test_start("Event Simulation", "Should allow for UI testing");
 
 // Create our button and ensure it is in a normal state.
-var button = instance_create(50, 50, obj_clickme);
+var button = instance_create_depth(50, 50, depth, obj_clickme);
 assert(button.clicked, false);
 
 // Simulate the user left clicking the button.

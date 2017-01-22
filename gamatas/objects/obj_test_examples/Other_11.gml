@@ -1,9 +1,9 @@
 /// Async test example
-describe("Async Tests", "Allows an object some time to perform an action and " + 
+test_start("Async Tests", "Allows an object some time to perform an action and " + 
          "tests the end result");
 
 // Instantiate our counting object (counts 1 per step).
-instance_create(0, 0, obj_counter);
+instance_create_depth(0, 0, depth, obj_counter);
 
 // Make sure it is in the state we expect.
 assert(obj_counter.count, 1);

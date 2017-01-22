@@ -1,12 +1,12 @@
 /// Object relationship example
-describe("Object Relationships", "The parent should remove the child if it is destroyed");
+test_start("Object Relationships", "The parent should remove the child if it is destroyed");
 
 // Just to be sure there isn't anything mucking up the test room.
 assert_does_not_exist(obj_parent_object);
 assert_does_not_exist(obj_child_object);
 
 // Create the parent, it is expected to create the child for us.
-var parent = instance_create(0, 0, obj_parent_object);
+var parent = instance_create_depth(0, 0, depth, obj_parent_object);
 
 assert_exists(obj_child_object);
 

@@ -1,5 +1,5 @@
 /// assert()
-describe("Assert", "Should know right from wrong.");
+test_start("Assert", "Should know right from wrong.");
 
 assert(true, true);
 assert(false, false);

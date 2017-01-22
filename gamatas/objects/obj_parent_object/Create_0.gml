@@ -1,2 +1,2 @@
-child = instance_create(0, 0, obj_child_object);
+child = instance_create_depth(0, 0, depth, obj_child_object);
 

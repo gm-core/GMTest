@@ -1,14 +1,14 @@
 /// Object definitions example
-describe("Object definitions", "Should allow for complex variable definitions to be verified");
+test_start("Object definitions", "Should allow for complex variable definitions to be verified");
 
 // Define a dummy object and populate it with some data.
-var props = instance_create(0, 0, obj_blank);
+var props = instance_create_depth(0, 0, depth, obj_blank);
 props.speed = 10;
 props.direction = 20;
 props.gravity = 30;
 
 // Now define our cloning object and pass props in as a variable.
-var receiver = instance_create(0, 0, obj_receiver);
+var receiver = instance_create_depth(0, 0, depth, obj_receiver);
 receiver.props = props;
 
 // Perform the cloning event we have defined in the object.

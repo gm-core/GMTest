@@ -3,4 +3,4 @@
  * working properly.
  */
  
-test_init("Assertion Tests");
+test_suite_init("Assertion Tests");
