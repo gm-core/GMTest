@@ -5,8 +5,8 @@ Version 2.0.0
 
 ## Table of Contents
 1. [Introduction](#introduction)
-2. [Example](#example)
-3. [How To Use Gamatas](#how-to-use-gamatas)
+2. [Installation](#installation)
+3. [Usage](#usage)
 4. [API](#api)
 5. [Developer Information](#developer-information)
 
