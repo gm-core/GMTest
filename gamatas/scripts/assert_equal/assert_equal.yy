@@ -1,8 +1,8 @@
 {
-    "id": "f0d0140a-b158-4b8b-aae4-2222b708546d",
+    "id": "d377ac5c-fbf8-40c4-be53-80e54de21afc",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "gamatas_int_to_event",
+    "name": "assert_equal",
     "IsCompatibility": false,
     "IsDnD": false
 }

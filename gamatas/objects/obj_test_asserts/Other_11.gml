@@ -1,11 +1,10 @@
-/// assert_not()
-test_start("Assert Not", "Should know right from right");
+test_start("assert_not_equal", "Should know right from right");
 
-assert_not("hello", "world");
-assert_not(true, false);
-assert_not(100, 200);
-assert_not(assert_not, assert);
-assert_not(obj_test_asserts, obj_another_object);
+assert_not_equal("hello", "world");
+assert_not_equal(true, false);
+assert_not_equal(100, 200);
+assert_not_equal(assert_not_equal, assert_equal);
+assert_not_equal(obj_test_asserts, obj_another_object);
 
 test_end();
 

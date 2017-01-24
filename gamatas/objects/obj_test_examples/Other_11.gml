@@ -6,7 +6,7 @@ test_start("Async Tests", "Allows an object some time to perform an action and "
 instance_create_depth(0, 0, depth, obj_counter);
 
 // Make sure it is in the state we expect.
-assert(obj_counter.count, 1);
+assert_equal(obj_counter.count, 1);
 
 // Now wait 10 steps.
 alarm[0] = 10;

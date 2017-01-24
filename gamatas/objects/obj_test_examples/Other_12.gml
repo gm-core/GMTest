@@ -17,9 +17,9 @@ with (receiver) {
 }
 
 // Check that the data has successfully been copied over.
-assert(receiver.speed, props.speed);
-assert(receiver.direction, props.direction);
-assert(receiver.gravity, props.gravity);
+assert_equal(receiver.speed, props.speed);
+assert_equal(receiver.direction, props.direction);
+assert_equal(receiver.gravity, props.gravity);
 
 test_end();
 

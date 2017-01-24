@@ -1,7 +1,7 @@
 GaMaTas - Testing automation for GameMaker: Studio
 =======
 
-Version 2.0.0
+Version 3.0.0
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -56,12 +56,12 @@ var oldHP = obj_player.hp;
 var damageAmount = 10;
 hurt_player(damageAmount); // A script to cause damage to the player.
 
-assert(obj_player.hp, oldHP - damageAmount);
+assert_equal(obj_player.hp, oldHP - damageAmount);
 
 test_end();
 ```
 
-`assert(x, y)` ensures that `x` and `y` are equal. See the [API](#api) for all
+`assert_equal(x, y)` ensures that `x` and `y` are equal. See the [API](#api) for all
 documentation on assertions.
 
 `test_end()` finishes the test and moves on to the next `User Defined` event.
@@ -112,11 +112,15 @@ that room, otherwise, quits the game with an information dump in the console.
 
 All assertions can optionally take a custom error message as a third argument.
 
-#### `assert(value, expectedValue [, customMessage])`
+#### `assert(value, [, customMessage])`
+
+Ensures that the given `value` is true (convenience for `assert_is_true`).
+
+#### `assert_equal(value, expectedValue [, customMessage])`
 
 Ensures that the given `value` is equal to `expectedValue`.
 
-#### `assert_not(value, unexpectedValue [, customMessage])`
+#### `assert_not_equal(value, unexpectedValue [, customMessage])`
 
 Ensures that the given `value` is NOT equal to `unexpectedValue`.
 
@@ -127,6 +131,18 @@ Ensures that an instance of `object` exists in the room.
 #### `assert_does_not_exist(object [, customMessage])`
 
 Ensures that an instance of `object` does not exist in the room.
+
+#### `assert_is_true(value [, customMessage])`
+
+Ensures the given `value` is `true`.
+
+#### `assert_is_false(value [, customMessage])`
+
+Ensures the given `value` is `false`.
+
+#### `assert_is_undefined(value [, customMessage])`
+
+Ensures the given `value` passes `is_undefined()`.
 
 ## Developer Information
 

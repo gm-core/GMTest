@@ -547,7 +547,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "scripts\\assert_not\\assert_not.yy",
+                "resourcePath": "scripts\\assert_not_equal\\assert_not_equal.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -585,7 +585,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "scripts\\assert\\assert.yy",
+                "resourcePath": "scripts\\assert_equal\\assert_equal.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -723,9 +723,9 @@
             }
         },
         {
-            "Key": "f0d0140a-b158-4b8b-aae4-2222b708546d",
+            "Key": "c4b87c90-d4cf-49dc-815c-8bc8c93e8541",
             "Value": {
-                "id": "80e74b9a-74f7-4f35-899a-a4ac5c58946c",
+                "id": "3a7898bf-e5ea-497a-9364-e9819da20229",
                 "modelName": "GMResourceInfo",
                 "mvc": "1.0",
                 "configDeltaFiles": [
@@ -737,7 +737,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "scripts\\gamatas_int_to_event\\gamatas_int_to_event.yy",
+                "resourcePath": "scripts\\assert\\assert.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1006,6 +1006,63 @@
                 "resourcePath": "notes\\compatibility_report_220117_152907297.yy",
                 "resourceType": "GMNotes"
             }
+        },
+        {
+            "Key": "cbcbeb92-b5d6-4674-83a3-a407f50e9aac",
+            "Value": {
+                "id": "56962dee-ca9d-43c3-b9c5-4971fab4c4a6",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\\assert_is_true\\assert_is_true.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "24f8ce45-3674-440d-b7d8-de2111f66bba",
+            "Value": {
+                "id": "836ba593-6243-4c9b-98f6-aeaa1b81ad41",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\\assert_is_false\\assert_is_false.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "2cacc8c2-b8c0-4039-93f5-554aa5b76873",
+            "Value": {
+                "id": "71f8453e-e0f6-476c-a293-c4aa01fb225c",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\\assert_is_undefined\\assert_is_undefined.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "room_order": [
@@ -1023,7 +1080,10 @@
         "f2adc9b2-ae21-41d4-85cf-4cbbbecf51c5",
         "cf3a9c35-023a-4f2d-ab0b-af7dda4bb4e0",
         "5028f1c1-dde3-4de3-b559-a504c66c8a2d",
-        "f0d0140a-b158-4b8b-aae4-2222b708546d",
+        "cbcbeb92-b5d6-4674-83a3-a407f50e9aac",
+        "24f8ce45-3674-440d-b7d8-de2111f66bba",
+        "2cacc8c2-b8c0-4039-93f5-554aa5b76873",
+        "c4b87c90-d4cf-49dc-815c-8bc8c93e8541",
         "80812060-b415-451a-9cea-bda537bd327a",
         "792e3d28-72a9-4ef4-908a-fdf390ae00a7"
     ],

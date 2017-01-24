@@ -1,12 +1,6 @@
+/// @desc Ensures the passed in object/instance does not exist in this room
 /// @param Object
-/*
- * Ensures that an instance of the given object exists.
- * If it fails, it will log an error and fail the test.
- *
- * Example:
- * kill_boss();
- * assert_does_not_exist(obj_boss);
- */
+
 global.gamatas_testAssertNumber++;
 if (instance_exists(argument0)) {
 

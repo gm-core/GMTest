@@ -1,10 +1,9 @@
-/// assert()
-test_start("Assert", "Should know right from wrong.");
+test_start("assert_equal", "Should know right from wrong.");
 
-assert(true, true);
-assert(false, false);
-assert("hello", "hello");
-assert(100, 100);
+assert_equal(true, true);
+assert_equal(false, false);
+assert_equal("hello", "hello");
+assert_equal(100, 100);
 
 test_end();
 

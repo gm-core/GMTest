@@ -1,12 +1,5 @@
+/// @desc Ensures the passed in object/instance exists
 /// @param Object
-/*
- * Ensures that an instance of the given object exists.
- * If it fails, it will log an error and fail the test.
- *
- * Example:
- * spawn_boss();
- * assert_exists(obj_boss);
- */
 global.gamatas_testAssertNumber++;
 if (!instance_exists(argument0)) {
     var msg;
