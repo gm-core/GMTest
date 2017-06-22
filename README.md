@@ -8,7 +8,8 @@ Version 4.0.0
 2. [Installation](#installation)
 3. [Usage](#usage)
 4. [API](#api)
-5. [Developer Information](#developer-information)
+5. [GM Core](#gm-core)
+6. [License](#license)
 
 
 ## Introduction
