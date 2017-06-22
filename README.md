@@ -18,7 +18,7 @@ Gamatas is a collection of GML scripts to add automated testing to GameMaker.
 
 ## Installation
 
-Download the latest [gamatas.zip from releases](https://github.com/twisterghost/gamatas/releases) and import the scripts
+Download the latest [gamatas.zip from releases](https://github.com/gm-core/gamatas/releases) and import the scripts
 into your project.
 
 ## GameMaker: Studio 2 Polyfills
