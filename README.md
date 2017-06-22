@@ -22,7 +22,6 @@ into your project.
 
 ## Usage
 
-
 ### 1. Define the test suite
 
 Create an object to house the tests for a suite. You can have as many test
@@ -144,11 +143,16 @@ Ensures the given `value` is `false`.
 
 Ensures the given `value` passes `is_undefined()`.
 
-## Developer Information
+## GM Core
 
-If you would like to contribute to Gamatas, I would happily accept pull
-requests that seem to add value or fix bugs. If you find an issue with Gamatas,
-please report it by opening a GitHub Issue on this repo.
+Gamatas is a part of the [GM Core](https://github.com/gm-core) project.
 
-If you are having issues using Gamatas, you can feel free to email me directly
-at twisterghost@gmail.com
+## License
+
+Copyright (c) 2017 Michael Barrett
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
