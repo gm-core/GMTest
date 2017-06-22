@@ -1,1 +1,1 @@
-test_suite_pass();
+test_describe_pass(obj_test_examples);

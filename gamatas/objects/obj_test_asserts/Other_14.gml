@@ -1,4 +1,4 @@
-test_start("assert", "Should pass for truths")
+test_it("Should pass for truths")
 
 assert(true);
 assert(1);

@@ -1,5 +1,5 @@
 /// Object relationship example
-test_start("Object Relationships", "The parent should remove the child if it is destroyed");
+test_it("should remove the child if it is destroyed");
 
 // Just to be sure there isn't anything mucking up the test room.
 assert_does_not_exist(obj_parent_object);

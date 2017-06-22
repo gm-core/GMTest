@@ -1,5 +1,5 @@
 /// Object definitions example
-test_start("Object definitions", "Should allow for complex variable definitions to be verified");
+test_it("should allow for complex variable definitions to be verified");
 
 // Define a dummy object and populate it with some data.
 var props = instance_create_depth(0, 0, depth, obj_blank);

@@ -1,5 +1,5 @@
 /// Async test example
-test_start("Async Tests", "Allows an object some time to perform an action and " + 
+test_it("Allows an object some time to perform an action and " + 
          "tests the end result");
 
 // Instantiate our counting object (counts 1 per step).

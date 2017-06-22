@@ -1,4 +1,4 @@
-test_start("assert_is_false", "Should know false");
+test_it("Should know false");
 
 assert_is_false(false);
 assert_is_false(!true);

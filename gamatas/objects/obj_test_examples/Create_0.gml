@@ -3,7 +3,7 @@
  * with the testing automation suite for GameMaker.
  */
  
-test_suite_init("Example Tests");
+test_describe("Example Tests");
 
 // Used in a later test.
 temp = 0;

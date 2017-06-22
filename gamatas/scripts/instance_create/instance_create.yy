@@ -1,8 +1,8 @@
 {
-    "id": "acd87a85-d0fe-42c7-a632-19a03e831d55",
+    "id": "407c5eb6-c3c1-4ae3-94e7-3cb26f6c37c2",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "test_suite_init",
+    "name": "instance_create",
     "IsCompatibility": false,
     "IsDnD": false
 }

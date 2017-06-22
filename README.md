@@ -1,7 +1,7 @@
 GaMaTas - Testing automation for GameMaker: Studio
 =======
 
-Version 3.0.0
+Version 4.0.0
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -19,6 +19,10 @@ Gamatas is a collection of GML scripts to add automated testing to GameMaker.
 
 Download the latest [gamatas.zip from releases](https://github.com/twisterghost/gamatas/releases) and import the scripts
 into your project.
+
+## GameMaker: Studio 2 Polyfills
+
+If you are using GameMaker: Studio 2, you must have the `instance_create` script imported to your game as well from the `polyfills` folder. GameMaker: Studio 1.4 does not need this script, as it will cause an error. If you imported your project from GM:S 1.4, you may already have this script from the compatability scripts.
 
 ## Usage
 
@@ -82,30 +86,47 @@ a status report of all your tests.
 
 ### Test Management
 
-#### `test_suite_init(name)`
+#### `test_describe(systemName)`
 
-Initializes a test suite with the given name.
+Initializes a test suite of the given system name, and begins running the first test (User Event 0)
 
-#### `test_start(title, description)`
+```gml
+/// @param {String} systemName
+/*
+ * example:
+ */
 
-Defines an individual test named `title`, expecting the behavior defined in
-`description`.
+test_describe("obj_player");
+```
+
+#### `test_it(behaviorDescription)`
+
+Begins a test of the given behavior.
+
+```gml
+/// @param {String} behaviorDescription
+/*
+ * Example:
+ */
+
+test_it("dies when health is 0");
+```
 
 #### `test_end()`
 
-Ends the current individual test, passing on to the next test or failing and
-quitting.
+Ends the current individual test, passing on to the next test or failing and quitting.
 
 #### `test_fail()`
 
-Forces the current test to fail. Mainly used by assert functions, but can be
-called directly if need be.
+Forces the current test to fail. Mainly used by assert functions, but can be called directly if need be.
 
-#### `test_suite_pass()`
+#### `test_describe_pass(optionalNextObject)`
 
-Passes the current test suite, to be called on the final user defined event on 
-the test object. If there is a room after the current one, it will move on to
-that room, otherwise, quits the game with an information dump in the console.
+Passes the current test suite, to be called on the final user defined event on the test object.
+
+If you pass another test object to this function, it will create that object and destroy this one to continue tests.
+
+Otherwise, if there is a room after the current one, it will move on to that room, otherwise, quits the game with an information dump in the console.
 
 ### Assert Types
 

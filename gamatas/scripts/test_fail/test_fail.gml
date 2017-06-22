@@ -7,5 +7,5 @@
  var msg = argument0; 
 gamatas_info(msg);
 gamatas_info("In suite " + global.gamatas_testSuiteName);
-gamatas_info("In test " + global.gamatas_testName + ": " + global.gamatas_testDescription);
+gamatas_info(global.gamatas_testSuiteName + " " + global.gamatas_testDescription);
 global.gamatas_testPassed = false;

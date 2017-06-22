@@ -1,4 +1,4 @@
-test_start("assert_equal", "Should know right from wrong.");
+test_it("Should know right from wrong.");
 
 assert_equal(true, true);
 assert_equal(false, false);

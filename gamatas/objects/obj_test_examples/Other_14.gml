@@ -1,3 +1,3 @@
 /// Pass tests
-test_suite_pass();
+test_describe_pass();
 

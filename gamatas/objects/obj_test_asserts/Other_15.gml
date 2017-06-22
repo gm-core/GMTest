@@ -1,4 +1,4 @@
-test_start("assert_is_true", "Should know truth");
+test_it("Should know truth");
 
 assert_is_true(true);
 assert_is_true(!false);
