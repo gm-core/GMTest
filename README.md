@@ -73,7 +73,7 @@ documentation on assertions.
 When you have written the tests, your last User Defined event should contain:
 
 ```GML
-test_suite_pass();
+test_describe_pass();
 ```
 
 This will alert Gamatas that the entire test suite for that test object has
