@@ -32,11 +32,11 @@ If you are using GameMaker: Studio 2, you must have the `instance_create` script
 Create an object to house the tests for a suite. You can have as many test
 suites as you want. Each suite is represented by an object.
 
-In the `create` event of your object, use the `test_suite_init()` function to define
+In the `create` event of your object, use the `test_describe()` function to define
 your test:
 
 ```GML
-test_suite_init("Player Health and Death Tests");
+test_describe("Player takes damage");
 ```
 
 ### 2. Write some tests
@@ -45,10 +45,10 @@ Gamatas will run through tests in order based on your User Defined events. On
 your test object, add a `User Defined 0` event. This is the first user defined
 event, and therefore will be the first test to run.
 
-Now, define a specific test with `test_start()`:
+Now, define a specific test with `test_it()`:
 
 ```GML
-test_start("Player Takes Damage", "Should cause the health variable to be lower")
+test_it("causes the health variable to be lower")
 ```
 Next, write the actual test code. Write some code to ensure that
 there is a player object in the game, then hurt it, then check that it has
