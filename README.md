@@ -1,7 +1,7 @@
 GaMaTas - Testing automation for GameMaker: Studio
 =======
 
-Version 4.0.0
+Version 4.1.0
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -20,10 +20,6 @@ Gamatas is a collection of GML scripts to add automated testing to GameMaker.
 
 Download the latest [gamatas.zip from releases](https://github.com/gm-core/gamatas/releases) and import the scripts
 into your project.
-
-## GameMaker: Studio 2 Polyfills
-
-If you are using GameMaker: Studio 2, you must have the `instance_create` script imported to your game as well from the `polyfills` folder. GameMaker: Studio 1.4 does not need this script, as it will cause an error. If you imported your project from GM:S 1.4, you may already have this script from the compatability scripts.
 
 ## Usage
 
