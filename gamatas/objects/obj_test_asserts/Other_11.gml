@@ -1,4 +1,5 @@
-test_it("Should know right from right");
+/// @desc assert_not_equal
+test_it("should know right from right");
 
 assert_not_equal("hello", "world");
 assert_not_equal(true, false);

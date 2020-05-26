@@ -14,7 +14,7 @@ if (argument_count > 0) {
 gamatas_info("TEST SUITE PASSED: " + global.gamatas_testSuiteName);
 
 if (nextTest != -1) {
-    instance_create(0, 0, nextTest);
+    instance_create_depth(0, 0, 0, nextTest);
     instance_destroy();
 } else if (room != room_last) {
     room_goto_next();

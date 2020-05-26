@@ -1,4 +1,5 @@
-test_it("Should know truth");
+/// @desc assert_is_true
+test_it("should know truth");
 
 assert_is_true(true);
 assert_is_true(!false);

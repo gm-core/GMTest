@@ -31,14 +31,6 @@
     },
     "resources": [
         {
-            "Key": "0499b83d-b535-4de3-b80e-dca212bcd109",
-            "Value": {
-                "id": "3f1d3902-5587-4596-aa19-222e22a2c18a",
-                "resourcePath": "notes\\notes.yy",
-                "resourceType": "GMNotes"
-            }
-        },
-        {
             "Key": "05e432ff-7a29-4081-bc70-8b82cd0e78ec",
             "Value": {
                 "id": "bf181391-8c31-4e5c-bd57-f2b43ebe9143",
@@ -139,14 +131,6 @@
             "Value": {
                 "id": "8654185b-b6c7-4a92-bc26-6d8a7eeb5151",
                 "resourcePath": "scripts\\test_describe_pass\\test_describe_pass.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "407c5eb6-c3c1-4ae3-94e7-3cb26f6c37c2",
-            "Value": {
-                "id": "f7847287-7830-4083-84d1-5a699efa8dcf",
-                "resourcePath": "scripts\\instance_create\\instance_create.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -255,14 +239,6 @@
             }
         },
         {
-            "Key": "9abb27ea-87ee-40c3-8b9a-c5b07cb19671",
-            "Value": {
-                "id": "3ae72030-33d8-4183-8a80-46ed153a61ea",
-                "resourcePath": "views\\9abb27ea-87ee-40c3-8b9a-c5b07cb19671.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "a1c02a50-c99f-493c-847e-8fa7ed52f2a8",
             "Value": {
                 "id": "32bcec41-84a5-489a-b19d-3b4c339aee11",
@@ -348,14 +324,6 @@
                 "id": "3a7898bf-e5ea-497a-9364-e9819da20229",
                 "resourcePath": "scripts\\assert\\assert.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "c4d8ed8e-4784-4839-b9ba-f86515d63cf2",
-            "Value": {
-                "id": "50955af4-cbc1-4a41-b698-ad85f518dabc",
-                "resourcePath": "notes\\compatibility_report_220117_152907297.yy",
-                "resourceType": "GMNotes"
             }
         },
         {
@@ -487,8 +455,7 @@
         "2cacc8c2-b8c0-4039-93f5-554aa5b76873",
         "c4b87c90-d4cf-49dc-815c-8bc8c93e8541",
         "80812060-b415-451a-9cea-bda537bd327a",
-        "792e3d28-72a9-4ef4-908a-fdf390ae00a7",
-        "407c5eb6-c3c1-4ae3-94e7-3cb26f6c37c2"
+        "792e3d28-72a9-4ef4-908a-fdf390ae00a7"
     ],
     "tutorial": ""
 }

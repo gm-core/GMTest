@@ -4,6 +4,3 @@
  */
  
 test_describe("Example Tests");
-
-// Used in a later test.
-temp = 0;

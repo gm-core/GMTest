@@ -1,4 +1,5 @@
-test_it("Should pass for truths")
+/// @desc assert
+test_it("should pass for truths")
 
 assert(true);
 assert(1);

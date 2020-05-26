@@ -1,4 +1,4 @@
-/// Object definitions example
+/// @desc Object definitions example
 test_it("should allow for complex variable definitions to be verified");
 
 // Define a dummy object and populate it with some data.

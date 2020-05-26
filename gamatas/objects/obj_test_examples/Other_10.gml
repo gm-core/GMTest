@@ -1,4 +1,4 @@
-/// Object relationship example
+/// @desc Object relationship example
 test_it("should remove the child if it is destroyed");
 
 // Just to be sure there isn't anything mucking up the test room.

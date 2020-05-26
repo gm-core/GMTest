@@ -1,4 +1,4 @@
-/// Event simulation example
+/// @desc Event simulation example
 test_it("Should allow for UI testing");
 
 // Create our button and ensure it is in a normal state.

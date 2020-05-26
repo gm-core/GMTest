@@ -1,4 +1,4 @@
-/// Async test example
+/// @desc Async test example
 test_it("Allows an object some time to perform an action and " + 
          "tests the end result");
 
