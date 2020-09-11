@@ -3,7 +3,7 @@ function _test_create_assert_error(argument0) {
 	 * Helper method for asserts to create standardized error
 	 * messages. Not meant for external use.
 	 */
-	throw ("ASSERT ERROR - " + string(argument0));
+	throw ("ASSERTION ERROR: " + string(argument0));
 }
 
 
@@ -116,5 +116,35 @@ function assert_not_equal() {
 	        msg = _test_create_assert_error(string(argument[0]) + " shouldn\'t be " + string(argument[1]));
 	    }
 	    throw (msg);
+	}
+}
+
+/// @desc Ensures the passed in method throws an exception
+/// @param testMethod
+/// @param optionalExpectedMessage
+function assert_throws() {
+	var testMethod = argument[0];
+	var expectedMessage = argument_count > 1 ? argument[1] : "";
+	var thrownErrorMessage = "";
+	var didThrow = false;
+	var didThrowCorrectMessage = argument_count == 1;
+	
+	try {
+		testMethod();
+	} catch (error) {
+		didThrow = true;
+		thrownErrorMessage = typeof(error) == "string" ? error : error.message;
+		
+		if (argument_count > 1) {
+			didThrowCorrectMessage = thrownErrorMessage == expectedMessage;
+		}
+	}
+	
+	if (!didThrow) {
+		throw _test_create_assert_error("Supplied method did not throw an error");
+	}
+	
+	if (!didThrowCorrectMessage) {
+		throw _test_create_assert_error("Supplied method threw unexpected error message: \"" + thrownErrorMessage + "\"");
 	}
 }

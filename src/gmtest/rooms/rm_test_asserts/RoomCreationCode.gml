@@ -1,1 +1,1 @@
-tests_main();
+test_main();
