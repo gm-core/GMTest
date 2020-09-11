@@ -6,7 +6,7 @@
     "path": "folders/Scripts/gmtest/test management.yy",
   },
   "resourceVersion": "1.0",
-  "name": "test_describe_pass",
+  "name": "gmtest_methods",
   "tags": [],
   "resourceType": "GMScript",
 }

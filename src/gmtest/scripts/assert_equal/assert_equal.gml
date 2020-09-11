@@ -3,8 +3,6 @@
 /// @param ExpectedValue
 /// @param OptionalMessage
 function assert_equal() {
-
-	global.gamatas_testAssertNumber++;
 	if (argument[0] != argument[1]) {
 
 	    var msg;
@@ -15,7 +13,4 @@ function assert_equal() {
 	    }
 	    test_fail(msg);
 	}
-
-
-
 }

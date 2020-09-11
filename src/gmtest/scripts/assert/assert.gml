@@ -7,6 +7,4 @@ function assert() {
 	} else {
 	    assert_is_true(argument[0]);
 	}
-
-
 }

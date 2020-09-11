@@ -1,7 +1,6 @@
 /// @desc Ensures the passed in object/instance exists
 /// @param Object
 function assert_exists() {
-	global.gamatas_testAssertNumber++;
 	if (!instance_exists(argument0)) {
 	    var msg;
     
@@ -12,7 +11,4 @@ function assert_exists() {
 	    }
 	    test_fail(msg);
 	}
-
-
-
 }

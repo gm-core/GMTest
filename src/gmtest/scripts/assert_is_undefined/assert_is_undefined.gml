@@ -2,8 +2,6 @@
 /// @param TestValue
 /// @param OptionalMessage
 function assert_is_undefined() {
-
-	global.gamatas_testAssertNumber++;
 	if (!is_undefined(argument[0])) {
 
 	    var msg;
@@ -14,7 +12,4 @@ function assert_is_undefined() {
 	    }
 	    test_fail(msg);
 	}
-
-
-
 }

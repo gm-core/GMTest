@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "test management",
-    "path": "folders/Scripts/gmtest/test management.yy",
+    "name": "tests",
+    "path": "folders/Scripts/tests.yy",
   },
   "resourceVersion": "1.0",
-  "name": "test_describe",
+  "name": "test_asserts",
   "tags": [],
   "resourceType": "GMScript",
 }
