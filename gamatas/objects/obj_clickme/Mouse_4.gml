@@ -1,2 +1,0 @@
-clicked = true;
-
