@@ -15,7 +15,7 @@ function test_assert_exists() {
 		test_it("errors when an object is not present", function() {
 			assert_throws(function() {
 				assert_exists(obj_an_object);
-			}, "ASSERTION ERROR: " + string(obj_an_object) + " has no instances.");
+			}, "ASSERTION ERROR: " + string(obj_an_object) + " has no instances");
 			
 		});
 	});

@@ -1,7 +1,7 @@
-GaMaTas - Testing automation for GameMaker: Studio
+GMTest - Testing automation for GameMaker: Studio
 =======
 
-Version 4.1.0
+Version 5.0.0
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -14,116 +14,170 @@ Version 4.1.0
 
 ## Introduction
 
-Gamatas is a collection of GML scripts to add automated testing to GameMaker.
+GMTest is a behavioral testing suite for GameMaker: Studio 2.3 and above.
 
 ## Installation
 
-Download the latest [gamatas.zip from releases](https://github.com/gm-core/gamatas/releases) and import the scripts
-into your project.
+Download the latest [gmtest.yymps from releases](https://github.com/gm-core/gmtest/releases) and import the package into your project. For detailed instructiosn, see [Installing .yymp Packages](https://gmcore.io/installing.html) on the GM Core website.
 
 ## Usage
 
-### 1. Define the test suite
+### 1. Define some tests
 
-Create an object to house the tests for a suite. You can have as many test
-suites as you want. Each suite is represented by an object.
-
-In the `create` event of your object, use the `test_describe()` function to define
-your test:
+In a script function or in an object create script, define a test suite using `test_describe`. This function will contain all of the tests related to a single subject. Let's write tests for a function called `hurt_player` which takes an amount of damage to apply to the player. Begin by defining the test suite. In this case, we'll write our test in a script resource called `test_hurt_player`.
 
 ```GML
-test_describe("Player takes damage");
+function test_hurt_player() {
+  test_describe('hurt_player', function() {
+    // Tests will go here!
+  });
+}
 ```
+
 
 ### 2. Write some tests
 
-Gamatas will run through tests in order based on your User Defined events. On
-your test object, add a `User Defined 0` event. This is the first user defined
-event, and therefore will be the first test to run.
+Now we can write the actual tests. We will describe the behavior of our `hurt_player` function using the `test_it` function. The first parameter we provide is a string describing the expected behavior. It can be written like a statement - `test_it("subtracts health from the player"...`. Read it aloud! "It subtracts health from the player".
 
-Now, define a specific test with `test_it()`:
+The second parameter of `test_it` is a function to be run to test this behavior. We will call the `hurt_player` function and test that the `health` variable has been altered as we expect, using one of the `assert` methods provided by GM Test. We will get into "asserts" later, but for now, just know that `assert_equal` tests that two values are equal.
 
-```GML
-test_it("causes the health variable to be lower")
-```
-Next, write the actual test code. Write some code to ensure that
-there is a player object in the game, then hurt it, then check that it has
-lower health than before with an assertion:
+So, our full script now looks like this:
+
 
 ```GML
-instance_create(100, 100, obj_player);
-var oldHP = obj_player.hp;
-var damageAmount = 10;
-hurt_player(damageAmount); // A script to cause damage to the player.
+function test_hurt_player() {
+  test_describe('hurt_player', function() {
+    
+    test_it("subtracts health from the player", function() {
+      health = 100;
+      hurt_player(10);
+      assert_equal(health, 90);
+    });
 
-assert_equal(obj_player.hp, oldHP - damageAmount);
-
-test_end();
+  });
+}
 ```
 
-`assert_equal(x, y)` ensures that `x` and `y` are equal. See the [API](#api) for all
-documentation on assertions.
+Lookin' good. You can have as many `test_it` calls as you want inside of a `test_describe`, and you can have as many `test_describe` calls as you want as well. In general, you should use a new `test_describe` for each new component you want to test, and a `test_it` for each behavior of the component you are testing.
 
-`test_end()` finishes the test and moves on to the next `User Defined` event.
+### 3. Run your tests
 
-When you have written the tests, your last User Defined event should contain:
+We've got the test written but now we need to run it. Create an empty room, or a new Object, and in the creation code for either the room or the object, we will write just a few lines of code to run our tests. Reminder: if you are doing this in an object, be sure to place the object in the first room in your game so the code runs!
 
-```GML
-test_describe_pass();
+We just need to call the function that contains our test code to set up the test, then run the tests with `test_run_all()`.
+
+```
+// Register our test
+test_hurt_player();
+
+// Run the tests!
+test_run_all();
 ```
 
-This will alert Gamatas that the entire test suite for that test object has
-passed, and to either continue on to the next test suite, or end the game with
-a status report of all your tests.
+Now, run your project. In the debug console output, you will see the results of your test:
 
-> **Note:** When a test suite passes, Gamatas moves to the next room to begin the next test.
-> make a room for each test suite that you need, containing the test runner object for that suite.
+```
+hurt_player
+|- It subtracts health from the player
+
+[1/1] Test exeuction end
+
+-----------
+All tests passing!
+```
+
+We've got a passing test! Great! If you've got the feel for things, check out the API docs below.
+
+If you want some more deeper examples, check out the docs on the [GMTest website @ GM Core](https://gmcore.io/gmtest)
+
 
 ## API
 
 ### Test Management
 
-#### `test_describe(systemName)`
+#### `test_describe(suiteName, suiteMethod)`
 
-Initializes a test suite of the given system name, and begins running the first test (User Event 0)
-
-```gml
-/// @param {String} systemName
-/*
- * example:
- */
-
-test_describe("obj_player");
-```
-
-#### `test_it(behaviorDescription)`
-
-Begins a test of the given behavior.
+Wraps a suite of tests
 
 ```gml
-/// @param {String} behaviorDescription
-/*
- * Example:
- */
+@param {string} testName         The name of the test suite
+@param {method} testSuiteMethod  A method containing the individual tests
 
-test_it("dies when health is 0");
+test_describe("hurt_player", function() {
+  // ...
+});
 ```
 
-#### `test_end()`
+#### `test_it(description, testMethod)`
 
-Ends the current individual test, passing on to the next test or failing and quitting.
+Defines an individual test.
 
-#### `test_fail()`
+```gml
+@param {string} description  The description of the functionality being tested
+@param {method} testMethod   A method containing the test
 
-Forces the current test to fail. Mainly used by assert functions, but can be called directly if need be.
+test_it("subtracts from the health variable", function() {
+  // ...
+});
+```
 
-#### `test_describe_pass(optionalNextObject)`
+#### `test_before(beforeMethod)`
 
-Passes the current test suite, to be called on the final user defined event on the test object.
+Defines a setup function for a suite of tests. This function is run once before the any tests in the test suite runs.
 
-If you pass another test object to this function, it will create that object and destroy this one to continue tests.
+```gml
+@param {method} setupMethod  A method containing the setup for a test suite
 
-Otherwise, if there is a room after the current one, it will move on to that room, otherwise, quits the game with an information dump in the console.
+test_before(function() {
+  health = 100;
+});
+```
+
+#### `test_before_each(beforeEachMethod)`
+
+Defines a setup function for each test in a suite. This function is before each test defined in a suite.
+
+```gml
+@param {method} setupMethod  A method containing the setup for eachtest in a suite.
+
+test_beforeEach(function() {
+  health = 100;
+});
+```
+
+#### `test_after(afterMethod)`
+
+Defines a cleanup function for a suite of tests. This function is run once after all tests in the suite have finished.
+
+```gml
+@param {method} cleanupMethod  A method containing the cleanup for a test suite
+
+test_after(function() {
+  score = 0;
+});
+```
+
+#### `test_after_each(afterMethod)`
+
+Defines a cleanup function for each test in a suite of tests.
+
+```gml
+@param {method} cleanupMethod  A method containing the cleanup for a test suite
+
+test_after_each(function() {
+  score = 0;
+});
+```
+
+#### `test_run_all(optionalAutoEnd)`
+
+Runs every test that has been defined within a `test_describe` before calling.
+
+```gml
+@param autoEnd {boolean}  If GM Test should close the game upon completion of the tests. Defaults to false.
+
+test_run_all(true);
+```
 
 ### Assert Types
 
@@ -161,9 +215,19 @@ Ensures the given `value` is `false`.
 
 Ensures the given `value` passes `is_undefined()`.
 
+#### `assert_throws(function [, expectedErrorMessage])`
+
+Ensures the given function throws an error message. Optionally specify `expectedErrorMessage` to validate the error message.
+
+```gml
+assert_throws(function() {
+  throw "test";
+}, "test");
+```
+
 ## GM Core
 
-Gamatas is a part of the [GM Core](https://github.com/gm-core) project.
+GMTest is a part of the [GM Core](https://github.com/gm-core) project.
 
 ## License
 
