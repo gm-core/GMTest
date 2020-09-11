@@ -11,7 +11,9 @@ function test_assertions() {
 		});
 	
 		test_it("can tell when an object exists", function() {
-			assert_exists(obj_test_asserts);
+			instance_create_depth(0, 0, 0, obj_another_object);
+			assert_exists(obj_another_object);
+			instance_destroy(obj_another_object);
 		});
 	
 		test_it("can tell when an object does not exist", function() {
