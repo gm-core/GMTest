@@ -129,9 +129,7 @@ function test_run_all() {
 			show_debug_message("In " + brokenTests[i].suite);
 			show_debug_message("|- × It " + brokenTests[i].test);
 			show_debug_message("|-- ERROR: " + brokenTests[i].errorMessage);
-			show_debug_message("");
 			show_debug_message("-----------");
-			show_debug_message("");
 		}
 	} else {
 		show_debug_message("All tests passing!");
